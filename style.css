@@ -194,3 +194,50 @@ header a {
   padding: 48px 128px;
   text-align: center;
 }
+.features img {
+  width: 100px;
+}
+
+#features-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 96px;
+  margin-top: 48px;
+}
+#featuresCTA a {
+  text-decoration: none;
+  color: #033075;
+  padding: 8px 32px;
+  display: inline-block;
+  margin-top: 56px;
+  border-radius: 3px;
+  background-color: white;
+  font-weight: 700;
+}
+
+.cta {
+  padding: 56px 128px;
+  text-align: center;
+  color: #033075;
+  background-color: #ececec;
+}
+
+.cta a {
+  text-decoration: none;
+  background-color: #033075;
+  padding: 8px 32px;
+  display: inline-block;
+  border-radius: 3px;
+  color: white;
+
+  font-weight: 600;
+}
+
+footer {
+  padding: 28px;
+  color: #033075;
+  font-weight: 600;
+
+  font-size: 18px;
+}
