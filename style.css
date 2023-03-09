@@ -1,0 +1,196 @@
+/* Colors
+-primary: #033075 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600&family=Roboto:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  background-color: rgb(250, 251, 252);
+}
+
+.row1 {
+  padding: 0px 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerImg {
+  flex-basis: 65%;
+}
+.logo {
+  width: 115px;
+  height: 115px;
+  max-width: 100%;
+}
+.headerbtnP {
+  padding-left: 12px;
+}
+.headerbtnP a {
+  background-color: #605b5b;
+  padding: 18px;
+
+  border-radius: 3px;
+}
+.headerbtnS {
+  margin-right: 20px;
+}
+.headerbtnS a {
+  background-color: #033075;
+  padding: 18px;
+  border-radius: 3px;
+}
+
+.row2 {
+  background-color: #033075;
+  padding: 32px 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "nav1 nav2 nav3 nav4 nav5";
+  align-items: center;
+  justify-items: center;
+}
+
+.nav1 {
+  grid-area: nav1;
+}
+
+.nav2 {
+  grid-area: nav2;
+}
+
+.nav3 {
+  grid-area: nav3;
+}
+
+.nav4 {
+  grid-area: nav4;
+}
+
+.nav5 {
+  grid-area: nav5;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.searchbtn {
+  padding: 8px 12px;
+  background-color: hsl(0, 3%, 37%);
+  border: none;
+  color: white;
+  margin-left: 12px;
+  border-radius: 3px;
+}
+
+.about {
+  padding: 54px 0px;
+  text-align: center;
+  color: #033075;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+  letter-spacing: 3px;
+}
+
+.about p {
+  font-size: 24px;
+}
+.latest {
+  padding: 48px 128px;
+  background-color: #ececec;
+  color: #033075;
+}
+.latest h3 {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin-bottom: 32px;
+}
+.jobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 14px 24px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "categories job1 job1 job1"
+    "categories job2 job2 job2"
+    "categories job3 job3 job3"
+    ". job4 job4 job4";
+}
+
+.categories {
+  grid-area: categories;
+}
+
+.job1 {
+  grid-area: job1;
+}
+
+.job2 {
+  grid-area: job2;
+}
+
+.job3 {
+  grid-area: job3;
+}
+
+.job4 {
+  grid-area: job4;
+}
+.job-card {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  background-color: white;
+  padding: 20px;
+}
+.imgbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.job-card img {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+.textbox p:not(:last-child) {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.categories {
+  background-color: white;
+  padding: 32px;
+}
+.categories p {
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.categories li {
+  margin-bottom: 14px;
+}
+.categories a {
+  text-decoration: none;
+  color: #033075;
+}
+.features {
+  background-color: #033075;
+  color: white;
+  padding: 48px 128px;
+  text-align: center;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>SmartHire Services</title>
+    <style>
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="row1">
+        <div class="headerImg">
+          <img
+            src="./assets/images/logo.png"
+            alt="SmartHire Services Logo"
+            class="logo"
+          />
+        </div>
+        <div class="headerbtnS">
+          <a href="#">Job Seekers</a>
+        </div>
+        <div class="headerbtnP">
+          <a href="#">Employers</a>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="nav1"><a href="#">Job Search</a></div>
+        <div class="nav2"><a href="#">Post Resume</a></div>
+        <div class="nav3"><a href="#">My Account </a></div>
+        <div class="nav4"><a href="#">Contact Us</a></div>
+        <div class="nav5"><a href="#">Post a Job</a></div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <img
+            src="./assets/images/hero.jpg"
+            alt="hands shaking"
+            style="width: 100%; height: 400px"
+          />
+          <div class="centered">
+            <h1
+              style="font-size: 48px; letter-spacing: 3px; margin-bottom: 8px"
+            >
+              Start your search
+            </h1>
+            <p style="margin-bottom: 48px; font-weight: 600; font-size: 16px">
+              A job board for developers to find their next programming job
+            </p>
+            <form>
+              <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Keywords"
+                style="padding: 8px; margin-right: 12px; width: 250px"
+              />
+              <select
+                id="cities"
+                name="cities"
+                style="padding: 8px; width: 200px"
+              >
+                <option value="" disabled selected>All Locations</option>
+                <option value="amman">Amman</option>
+                <option value="zarqa">Zarqa</option>
+                <option value="irbid">Irbid</option>
+                <option value="madaba">Madaba</option>
+              </select>
+              <input type="submit" value="Search" class="searchbtn" />
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <h2>SmartHires Job Board</h2>
+        <p>
+          Programming Jobs throughout Jordan and Middle East.<br />
+          Start your job search or post a new job offer.
+        </p>
+      </section>
+      <section class="latest">
+        <h3>Latest jobs</h3>
+        <div class="jobs">
+          <div class="categories">
+            <p>Browse by Category</p>
+            <ul>
+              <li><a href="#">Back-End Developer</a></li>
+              <li><a href="#">Data Associate</a></li>
+              <li><a href="#">DevOps Engineer</a></li>
+              <li><a href="#">Digital Solution Analyst</a></li>
+              <li><a href="#">Front-End Developer</a></li>
+              <li><a href="#">Full-Stack Developer</a></li>
+              <li><a href="#">QA Engineer</a></li>
+              <li><a href="#">Software Engineer</a></li>
+              <li><a href="#">Systems Engineer</a></li>
+              <li><a href="#">Web Developer</a></li>
+            </ul>
+          </div>
+          <div class="job1 job-card">
+            <div class="imgbox">
+              <img src="./assets/images/A2A.png" alt="A2A company logo" />
+            </div>
+            <div class="textbox">
+              <p>Full-Stack Developer</p>
+              <p>Access to Arabia</p>
+              <p>Amman, Jorden (on-site)</p>
+              <p>
+                Access to Arabia is a leading regional player specializing in
+                the provision of leading edge productivity solutions for the
+                financial industry.
+              </p>
+            </div>
+          </div>
+          <div class="job2 job-card">
+            <div class="imgbox">
+              <img src="./assets/images/Atypon.png" alt="A2A company logo" />
+            </div>
+            <div class="textbox">
+              <p>Front-End Engineer</p>
+              <p>Atypon</p>
+              <p>Amman, Jorden (on-site)</p>
+              <p>
+                Atypon develops publishing technologies for getting mission
+                critical content into the hands of the practitioners and
+                researchers who need it most.
+              </p>
+            </div>
+          </div>
+          <div class="job3 job-card">
+            <div class="imgbox">
+              <img
+                src="./assets/images/Chalktalk.png"
+                alt="A2A company logo"
+                style="border: 1px solid"
+              />
+            </div>
+            <div class="textbox">
+              <p>QA Engineer</p>
+              <p>ChalkTalk</p>
+              <p>Amman, Jorden (on-site)</p>
+              <p>
+                ChalkTalk is the only personalized learning program that creates
+                state standards-aligned ACT and SAT curriculum adapted for each
+                class, and personalized for every student.
+              </p>
+            </div>
+          </div>
+          <div class="job4 job-card">
+            <div class="imgbox">
+              <img src="./assets/images/Vardot.png" alt="A2A company logo" />
+            </div>
+            <div class="textbox">
+              <p>DevOps Engineer</p>
+              <p>Vardot</p>
+              <p>Amman, Jorden (on-site)</p>
+              <p>
+                Vardot is an award-winning Drupal web solutions provider that
+                helps organizations transform their websites to meet the
+                ever-changing needs of the digital world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <h3>All you need to upgrade your career is our membership !</h3>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+      <section class="cta"></section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
