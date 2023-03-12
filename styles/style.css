@@ -1,0 +1,309 @@
+/*Variables*/
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600&family=Roboto:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  background-color: rgb(250, 251, 252);
+  font-size: 1.6rem;
+}
+
+.row1 {
+  padding: 0rem 8.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerImg {
+  flex-basis: 65%;
+}
+
+.logo {
+  width: 11.5rem;
+  height: 11.5rem;
+  max-width: 100%;
+}
+
+.headerbtnP {
+  padding-left: 1.2rem;
+}
+.headerbtnP a {
+  background-color: #605b5b;
+  padding: 1.8rem;
+  border-radius: 3px;
+}
+
+.headerbtnS {
+  margin-right: 2rem;
+}
+.headerbtnS a {
+  background-color: #033075;
+  padding: 1.8rem;
+  border-radius: 3px;
+}
+
+.row2 {
+  background-color: #033075;
+  padding: 3.2rem 9.6rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: "nav1 nav2 nav3 nav4 nav5";
+  align-items: center;
+  justify-items: center;
+}
+
+.nav1 {
+  grid-area: nav1;
+}
+
+.nav2 {
+  grid-area: nav2;
+}
+
+.nav3 {
+  grid-area: nav3;
+}
+
+.nav4 {
+  grid-area: nav4;
+}
+
+.nav5 {
+  grid-area: nav5;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.searchbtn {
+  padding: 0.8rem 1.2rem;
+  background-color: hsl(0, 3%, 37%);
+  border: none;
+  color: white;
+  margin-left: 1.2rem;
+  border-radius: 3px;
+}
+
+.about {
+  padding: 5.4rem 0rem;
+  text-align: center;
+  color: #033075;
+}
+.about h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 3px;
+}
+.about p {
+  font-size: 2.4rem;
+}
+
+.latest {
+  padding: 4.8rem 12.8rem;
+  background-color: #ececec;
+  color: #033075;
+}
+.latest h3 {
+  text-align: center;
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 3.2rem;
+}
+
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.4rem 2.4rem;
+  grid-auto-flow: row;
+  grid-template-areas: "categories job1 job1 job1" "categories job2 job2 job2" "categories job3 job3 job3" ". job4 job4 job4";
+}
+
+.categories {
+  grid-area: categories;
+  background-color: white;
+  padding: 3.2rem;
+}
+.categories p {
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+}
+.categories li {
+  margin-bottom: 1.4rem;
+}
+.categories a {
+  text-decoration: none;
+  color: #033075;
+}
+
+.job1 {
+  grid-area: job1;
+}
+
+.job2 {
+  grid-area: job2;
+}
+
+.job3 {
+  grid-area: job3;
+}
+
+.job4 {
+  grid-area: job4;
+}
+
+.job-card {
+  display: flex;
+  gap: 1.8rem;
+  font-size: 1.4rem;
+  background-color: white;
+  padding: 2rem;
+}
+.job-card img {
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+}
+
+.imgbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textbox {
+  display: grid;
+}
+.textbox p:not(:last-child) {
+  font-weight: 600;
+}
+
+.features {
+  background-color: #033075;
+  color: white;
+  padding: 4.8rem 12.8rem;
+  text-align: center;
+}
+.features img {
+  width: 10rem;
+}
+
+#features-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9.6rem;
+  margin-top: 4.8rem;
+}
+
+#featuresCTA a {
+  text-decoration: none;
+  color: #033075;
+  padding: 0.8rem 3.2rem;
+  display: inline-block;
+  margin-top: 5.6rem;
+  border-radius: 3px;
+  background-color: white;
+  font-weight: 700;
+}
+
+.cta {
+  padding: 5.6rem 12.8rem;
+  text-align: center;
+  color: #033075;
+  background-color: #ececec;
+}
+.cta a {
+  text-decoration: none;
+  background-color: #033075;
+  padding: 0.8rem 3.2rem;
+  display: inline-block;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+}
+
+footer {
+  padding: 2.8rem;
+  color: #033075;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+/* BELOW 1200px (Landscape Tablets) */
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  .searchbtn {
+    margin-top: 1.4rem;
+    margin-right: -1.8rem;
+  }
+}
+/* BELOW 944px (Tablets) */
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+}
+@media (max-width: 48em) {
+  .headerImg {
+    flex-basis: 55%;
+  }
+}
+/* BELOW 544px (Phones) */
+@media (max-width: 34em) {
+  .row1 {
+    padding: 0rem;
+  }
+  .headerImg {
+    flex-basis: 30%;
+  }
+  .headerbtnP a,
+  .headerbtnS a {
+    padding: 1rem;
+  }
+  .row2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "nav1 nav2" "nav3 nav4" "nav5 .";
+    gap: 24px 8px;
+  }
+  .jobs {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "categories" "job1" "job2" "job3" "job4";
+  }
+  .categories ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    list-style: none;
+  }
+  .job-card {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .textbox,
+  .imgbox {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
