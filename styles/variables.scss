@@ -1,0 +1,9 @@
+$primaryColor: #033075;
+$secondaryColor: white;
+$borderRadiusSM: 3px;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} ;
