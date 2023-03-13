@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./styles/style.css" rel="stylesheet" />
     <title>SmartHire Services</title>
-    <style>
-      .container {
-        position: relative;
-        text-align: center;
-        color: white;
-      }
-      .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -48,41 +35,19 @@
     <main>
       <section class="hero">
         <div class="container">
-          <img
-            src="./assets/images/hero.jpg"
-            alt="hands shaking"
-            style="width: 100%; height: 40rem"
-          />
+          <img src="./assets/images/hero.jpg" alt="hands shaking" />
           <div class="centered">
-            <h1
-              style="
-                font-size: 4.8rem;
-                letter-spacing: 3px;
-                margin-bottom: 0.8rem;
-              "
-              id="userName"
-            >
-              Start your search.
-            </h1>
-            <p
-              style="margin-bottom: 4.8rem; font-weight: 600; font-size: 1.6rem"
-            >
-              A job board for developers to find their next programming job
-            </p>
+            <h1 id="userName">Start your search.</h1>
+            <p>A job board for developers to find their next programming job</p>
             <form>
               <input
                 type="text"
                 id="search"
                 name="search"
                 placeholder="Keywords"
-                style="padding: 0.8rem; margin-right: 1.2rem; width: 25rem"
+                class="search"
               />
-              <select
-                id="cities"
-                name="cities"
-                style="padding: 0.8rem; width: 20rem"
-                onchange="alertFunction()"
-              >
+              <select id="cities" name="cities" onchange="alertFunction()">
                 <option value="" disabled selected>All Locations</option>
                 <option value="amman">Amman</option>
                 <option value="zarqa">Zarqa</option>
@@ -212,26 +177,8 @@
         </div>
       </section>
       <section class="cta">
-        <h3
-          style="
-            font-weight: 700;
-            font-size: 2.4rem;
-            margin-bottom: 0.8rem;
-            letter-spacing: 2px;
-          "
-        >
-          An Employer?
-        </h3>
-        <p
-          style="
-            font-weight: 600;
-            font-size: 1.8rem;
-            margin-bottom: 1.8rem;
-            letter-spacing: 2px;
-          "
-        >
-          Advertise your job here
-        </p>
+        <h3>An Employer?</h3>
+        <p>Advertise your job here</p>
         <a href="#">Post a job</a>
         <a href="#">Employer Sign In</a>
       </section>

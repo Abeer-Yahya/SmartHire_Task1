@@ -1,6 +1,10 @@
 $primaryColor: #033075;
 $secondaryColor: white;
+$bgColorMain: rgb(250, 251, 252);
+$bgColorSection: #ececec;
 $borderRadiusSM: 3px;
+$paddingLg: 4.8rem 12.8rem;
+$paddingSm: 4.8rem;
 
 @mixin flexCenter {
   display: flex;

@@ -1,21 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600&family=Roboto:wght@500&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Kantumruy Pro", sans-serif;
-  background-color: rgb(250, 251, 252);
-  font-size: 1.6rem;
-}
-
 .row1 {
   display: flex;
   justify-content: center;
@@ -89,17 +72,90 @@ header a {
   display: inline-block;
 }
 
+@media (max-width: 48em) {
+  .headerImg {
+    flex-basis: 55%;
+  }
+}
+@media (max-width: 34em) {
+  .row1 {
+    padding: 0rem;
+  }
+  .headerImg {
+    flex-basis: 30%;
+  }
+  .row2 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "nav1 nav2 nav3" "nav4 nav5 .";
+    padding: 4.8rem;
+    gap: 4rem;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  background-color: rgb(250, 251, 252);
+  font-size: 1.6rem;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.container img {
+  width: 100%;
+  height: 40rem;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered h1 {
+  font-size: 4.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.8rem;
+}
+.centered p {
+  margin-bottom: 4.8rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.centered form .search {
+  padding: 0.8rem;
+  margin-right: 1.2rem;
+  width: 25rem;
+}
+.centered form select {
+  padding: 0.8rem;
+  width: 20rem;
+}
+
 .searchbtn {
   padding: 0.8rem 1.2rem;
   background-color: hsl(0, 3%, 37%);
   border: none;
   color: white;
-  margin-left: 1.2rem;
   border-radius: 3px;
+  text-align: center;
 }
 
 .about {
-  padding: 5.4rem 0rem;
+  padding: 4.8rem 12.8rem;
   text-align: center;
   color: #033075;
 }
@@ -203,9 +259,8 @@ header a {
 }
 
 #features-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 9.6rem;
   margin-top: 4.8rem;
 }
@@ -226,6 +281,18 @@ header a {
   text-align: center;
   color: #033075;
   background-color: #ececec;
+}
+.cta h3 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 2px;
+}
+.cta p {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 2px;
 }
 .cta a {
   text-decoration: none;
@@ -262,50 +329,50 @@ footer {
     font-size: 50%;
   }
 }
-@media (max-width: 48em) {
-  .headerImg {
-    flex-basis: 55%;
-  }
-}
 /* BELOW 544px (Phones) */
 @media (max-width: 34em) {
-  .row1 {
-    padding: 0rem;
+  .centered #userName {
+    font-size: 3rem;
   }
-  .headerImg {
-    flex-basis: 30%;
+  .centered .search {
+    margin-bottom: 1.2rem;
+    text-align: center;
   }
-  .headerbtnP a,
-  .headerbtnS a {
-    padding: 1rem;
+  .centered select {
+    text-align: center;
   }
-  .row2 {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "nav1 nav2" "nav3 nav4" "nav5 .";
-    gap: 2.4rem 0.8rem;
+  .latest {
+    padding: 4.8rem 4.8rem;
   }
-  .jobs {
+  .latest .jobs {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "categories" "job1" "job2" "job3" "job4";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "job1" "job2" "job3" "job4";
   }
-  .categories ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.4rem;
-    list-style: none;
-  }
-  .job-card {
+  .latest .jobs .job-card {
     height: -moz-fit-content;
     height: fit-content;
+    flex-direction: column;
+    text-align: center;
   }
-  .textbox,
-  .imgbox {
+  .latest .jobs .job-card .textbox,
+  .latest .jobs .job-card .imgbox {
     display: block;
   }
-  #features-icons {
-    flex-direction: column;
+  .latest .categories {
+    display: none;
+  }
+  .features {
+    padding: 4.8rem 4.8rem;
+  }
+  .features #features-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+  }
+  .cta {
+    padding: 5.6rem 4.8rem;
+  }
+  .about {
+    padding: 4.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
