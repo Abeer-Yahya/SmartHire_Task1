@@ -48,6 +48,12 @@ function addCard(newEmployee) {
   let p3 = document.createElement("p");
   p3.textContent = "Account: " + newEmployee.account;
   cardText.append(p3);
+
+  // let an = document.createElement("a");
+  // const t = document.createTextNode("LinkedIn");
+  // an.setAttribute("href", newEmployee.account);
+  // an.appendChild(t);
+  // p3.appendChild(an);
 }
 
 function saveToLocal() {

@@ -375,4 +375,66 @@ footer {
   .about {
     padding: 4.8rem;
   }
+}
+/*Form*/
+#form {
+  margin: 4.8rem auto;
+  max-width: 55rem;
+  border-radius: 3px;
+  background-color: #ececec;
+  padding: 2.4rem;
+}
+#form input,
+#form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#form .submit {
+  width: 100%;
+  background-color: #033075;
+  color: white;
+  padding: 1.4rem 2rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+#card-container > div {
+  background-color: #ececec;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(3, 48, 117, 0.2);
+  transition: 0.3s;
+  margin: 0.8rem;
+  border-radius: 3px;
+  text-align: center;
+  width: 100%;
+  max-width: 35rem;
+}
+#card-container > div:hover {
+  box-shadow: 0 0.8rem 1.6rem 0 rgba(3, 48, 117, 0.2);
+}
+#card-container > div > div {
+  padding: 1rem 1.6rem;
+}
+#card-container h2 {
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+#card-container p {
+  margin-bottom: 1.4rem;
 }/*# sourceMappingURL=style.css.map */
