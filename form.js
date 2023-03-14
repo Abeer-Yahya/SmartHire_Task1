@@ -1,88 +1,70 @@
-function Employee(fullName, category, level, account) {
-  this.fullName = fullName;
-  this.jobCategory = category;
-  this.jobLevel = level;
-  this.linkedinAccount = account;
+function Employee(name, department, level, account) {
+  (this.fullName = name),
+    (this.department = department),
+    (this.level = level),
+    (this.account = account);
 }
 
-// Accessing on main tag
-const main = document.getElementById("main");
+// input new employees from form, add new cards for them and add them to the local storage
 
-// Creating table tag
-const table = document.createElement("table");
-table.setAttribute("border", 1 + "px");
+let form = document.getElementById("form");
+let allEmployees = [];
 
-// Prepending table inside the main tag
-main.append(table);
-
-// Creting a thead tag
-const thead = document.createElement("thead");
-
-const th1 = document.createElement("th");
-th1.textContent = "Full Name";
-thead.append(th1);
-
-const th2 = document.createElement("th");
-th2.textContent = "Job Title";
-thead.append(th2);
-
-const th3 = document.createElement("th");
-th3.textContent = "Level";
-thead.append(th3);
-
-const th4 = document.createElement("th");
-th4.textContent = "LinkedIn";
-thead.append(th4);
-
-table.prepend(thead);
-
-// Event code
-
-// Submited button
-const submit = document.getElementById("submit");
-
-// accessing on inputs
-const full_name = document.getElementById("full_name");
-const account = document.getElementById("account_url");
-
-// accessing on selects
-const caegory = document.getElementById("categories");
-const level = document.getElementById("levels");
-
-submit.addEventListener("click", (e) => {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
+  let fullName = document.getElementById("name").value;
+  let department = document.getElementById("department").value;
+  let level = document.getElementById("levels").value;
+  let account = document.getElementById("account").value;
+  let newEmployee = new Employee(fullName, department, level, account);
 
-  const emp = new Employee(
-    full_name.value,
-    caegory.value,
-    level.value,
-    account.value
-  );
-  render(full_name.value, caegory.value, level.value, account.value);
-  full_name.value = "";
-  caegory.value = caegory[0].value;
-  level.value = level[0].value;
-  account.value = "";
+  allEmployees.push(newEmployee);
+  saveToLocal();
+  addCard(newEmployee);
+  document.forms[0].reset();
 });
 
-function render(...rows) {
-  const tr = document.createElement("tr");
-  const users = [];
-  for (const row of rows) {
-    const td = document.createElement("td");
-    td.textContent = row;
-    tr.append(td);
-    users.push(row);
-  }
-  table.append(tr);
+let cardContainer = document.getElementById("card-container");
 
-  setLocalStorage(users);
+function addCard(newEmployee) {
+  let card = document.createElement("div");
+  cardContainer.append(card);
+
+  let cardText = document.createElement("div");
+  card.append(cardText);
+
+  let nameH2 = document.createElement("h2");
+  nameH2.textContent = newEmployee.fullName;
+  cardText.append(nameH2);
+
+  let p = document.createElement("p");
+  p.textContent = "Level: " + newEmployee.level;
+  cardText.append(p);
+
+  let p2 = document.createElement("p");
+  p2.textContent = "Department: " + newEmployee.department;
+  cardText.append(p2);
+
+  let p3 = document.createElement("p");
+  p3.textContent = "Account: " + newEmployee.account;
+  cardText.append(p3);
 }
 
-var count = 0;
-function setLocalStorage(...users) {
-  for (let i = 0; i < users.length; i++) {
-    localStorage.setItem(`users ${count}`, JSON.stringify(users));
-    count++;
-  }
+function saveToLocal() {
+  let strArr = JSON.stringify(allEmployees);
+  localStorage.setItem("employees", strArr);
+}
+
+function getFromLocal() {
+  let jsonArr = localStorage.getItem("employees");
+  let arr = JSON.parse(jsonArr);
+  allEmployees = arr;
+  arr.forEach((ele) => {
+    addCard(ele);
+  });
+  console.log(arr);
+}
+
+if (localStorage.getItem("employees") != null) {
+  getFromLocal();
 }

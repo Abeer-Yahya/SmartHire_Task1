@@ -36,49 +36,40 @@
         <div class="nav5"><a href="#">Post a Job</a></div>
       </nav>
     </header>
-    <section id="form-section">
-      <div>
-        <form action="index.html" method="post">
-          <input
-            type="text"
-            id="full_name"
-            placeholder="Enter employee full name"
-          />
-          <br />
-          <select id="categories">
-            <option value="Back-End Developer">Back-End Developer</option>
-            <option value="Data Associate">Data Associate</option>
-            <option value="DevOps Engineer">DevOps Engineer</option>
-            <option value="Digital Solution Analyst">
-              Digital Solution Analyst
-            </option>
-            <option value="Front-End Developer">Front-End Developer</option>
-            <option value="Full-Stack Developer">Full-Stack Developer</option>
-            <option value="QA Engineer">QA Engineer</option>
-            <option value="Software Engineer">Software Engineer</option>
-            <option value="Systems Engineer">Systems Engineer</option>
-            <option value="Web Developer">Web Developer</option>
-          </select>
-          <br />
-
-          <select id="levels">
-            <option value="Internship">Internship</option>
-            <option value="Entry Level">Entry Level</option>
-            <option value="Associate">Associate</option>
-            <option value="Mid-Senior Level">Mid-Senior Level</option>
-            <option value="Director">Director</option>
-            <option value="Executive">Executive</option>
-          </select>
-          <br />
-
-          <input type="url" name="account" id="account_url" />
-
-          <button type="submit" id="submit">Submit</button>
-        </form>
-      </div>
-    </section>
-
-    <main id="main"></main>
+    <main id="main">
+      <form action="" id="form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+        <label for="department">Department</label>
+        <select name="department" id="department" required>
+          <option value="Back-End Developer">Back-End Developer</option>
+          <option value="Data Associate">Data Associate</option>
+          <option value="DevOps Engineer">DevOps Engineer</option>
+          <option value="Digital Solution Analyst">
+            Digital Solution Analyst
+          </option>
+          <option value="Front-End Developer">Front-End Developer</option>
+          <option value="Full-Stack Developer">Full-Stack Developer</option>
+          <option value="QA Engineer">QA Engineer</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option value="Systems Engineer">Systems Engineer</option>
+          <option value="Web Developer">Web Developer</option>
+        </select>
+        <label for="levels">Level</label>
+        <select name="account" id="levels" required>
+          <option value="Internship">Internship</option>
+          <option value="Entry Level">Entry Level</option>
+          <option value="Associate">Associate</option>
+          <option value="Mid-Senior Level">Mid-Senior Level</option>
+          <option value="Director">Director</option>
+          <option value="Executive">Executive</option>
+        </select>
+        <label for="account">Account</label>
+        <input type="url" id="account" required />
+        <input type="submit" />
+      </form>
+      <div id="card-container"></div>
+    </main>
     <footer>
       <p style="text-align: center">SmartHire Services &copy; 2023</p>
     </footer>
