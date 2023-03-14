@@ -36,48 +36,49 @@
         <div class="nav5"><a href="#">Post a Job</a></div>
       </nav>
     </header>
-    <main>
-      <!-- <section class="formSection">
-        <h3>Do you want to be discovered by employers? Post your resume here!</h3>
-        <form action="" id="resumeForm">
-          <label for="fullName">Full Name</label><br/>
-          <input id="fullName" name="fullName" type="text" placeholder="Enter your full name . ."/><br/>
-          <label for="emailAdd">Email Address</label><br/>
-          <input id="emailAdd" name="emailAdd" type="email" placeholder="Enter your email address . ."/><br/>
-          <label for="jobTitle">Job Title</label><br/>
-          <input id="jobTitle" name="jobTitle" type="text" placeholder="Enter your job title . ." required/><br/>
-          <label for="jobLevel">Level</label><br/>
-          <select id="jobLevel" name="jobLevel" required>
-            <option value="internship">Internship</option>
-            <option value="entry">Entry Level</option>
-            <option value="associate">Associate</option>
-            <option value="mid">Mid-Senior Level</option>
-            <option value="director">Director</option>
-            <option value="executive">Executive</option>
-          </select><br/>
-          <label for="resume">Your Resume</label><br/>
-          <input id="resume" name="resume" type="file"/><br/>
-          <button type="submit" name="submit" value="submit">Post</button>
-        </form>
+    <section id="form-section">
+      <div>
+        <form action="index.html" method="post">
+          <input
+            type="text"
+            id="full_name"
+            placeholder="Enter employee full name"
+          />
+          <br />
+          <select id="categories">
+            <option value="Back-End Developer">Back-End Developer</option>
+            <option value="Data Associate">Data Associate</option>
+            <option value="DevOps Engineer">DevOps Engineer</option>
+            <option value="Digital Solution Analyst">
+              Digital Solution Analyst
+            </option>
+            <option value="Front-End Developer">Front-End Developer</option>
+            <option value="Full-Stack Developer">Full-Stack Developer</option>
+            <option value="QA Engineer">QA Engineer</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Systems Engineer">Systems Engineer</option>
+            <option value="Web Developer">Web Developer</option>
+          </select>
+          <br />
 
-        <ul class="subscribersList"></ul>
-      </section> -->
-      
-      <!-- <div class="container">
-        <form action="" id="loginForm">
-          <input type="text" id="username" class="form-control" placeholder="Enter your Username...">
-          <input type="password" id="password" class="form-control" placeholder="Enter your Password...">
-          <button type="submit">Submit</button>
+          <select id="levels">
+            <option value="Internship">Internship</option>
+            <option value="Entry Level">Entry Level</option>
+            <option value="Associate">Associate</option>
+            <option value="Mid-Senior Level">Mid-Senior Level</option>
+            <option value="Director">Director</option>
+            <option value="Executive">Executive</option>
+          </select>
+          <br />
+
+          <input type="url" name="account" id="account_url" />
+
+          <button type="submit" id="submit">Submit</button>
         </form>
       </div>
-      <section class="resumeSection"></section> -->
+    </section>
 
-      <input type="text" id="txtVal">
-        <button onclick="addLi()">Add</button>
-        <ul id="list">
-          
-        </ul>
-    </main>
+    <main id="main"></main>
     <footer>
       <p style="text-align: center">SmartHire Services &copy; 2023</p>
     </footer>
