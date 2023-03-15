@@ -1,6 +1,6 @@
-function Employee(name, department, level, account) {
+function Employee(name, category, level, account) {
   (this.fullName = name),
-    (this.department = department),
+    (this.category = category),
     (this.level = level),
     (this.account = account);
 }
@@ -13,10 +13,10 @@ let allEmployees = [];
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   let fullName = document.getElementById("name").value;
-  let department = document.getElementById("department").value;
+  let category = document.getElementById("category").value;
   let level = document.getElementById("levels").value;
   let account = document.getElementById("account").value;
-  let newEmployee = new Employee(fullName, department, level, account);
+  let newEmployee = new Employee(fullName, category, level, account);
 
   allEmployees.push(newEmployee);
   saveToLocal();
@@ -42,7 +42,7 @@ function addCard(newEmployee) {
   cardText.append(p);
 
   let p2 = document.createElement("p");
-  p2.textContent = "Department: " + newEmployee.department;
+  p2.textContent = "Job Title: " + newEmployee.category;
   cardText.append(p2);
 
   let p3 = document.createElement("p");
